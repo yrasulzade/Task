@@ -1,0 +1,15 @@
+#! /bin/bash
+while :
+do
+    echo "Enter file name of input file list along with absolute path : "
+    read inputFileList
+
+    if [ -f $inputFileList ]
+    then
+        echo "file exist, here is the content of the file"
+        cat $inputFileList
+        break
+    else
+        echo "File does not exist. Try again."
+    fi
+done
